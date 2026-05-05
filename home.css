@@ -1,0 +1,143 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents video from spilling out */
+}
+
+.video-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This keeps the aspect ratio perfect */
+  z-index: -1; /* Pushes the video behind the content */
+}
+
+.content {
+    font-family: MyTupi;
+    font-size: 50px;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.drive-section {
+  padding: 80px 50px;
+  background-color: #000; /* Matching your body */
+  text-align: center;
+  color: #008000;
+  font-family: MDIO-Medium;
+}
+
+.drive-section h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.drive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.drive-card {
+  background: #111; /* Slightly lighter than the background */
+  border: 1px solid #333;
+  padding: 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.drive-card:hover {
+  transform: translateY(-10px);
+  border-color: #555;
+  background: #1a1a1a;
+}
+
+.drive-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.drive-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.drive-card p {
+  font-size: 0.9rem;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+.ducks_logo {
+    height: 50px;
+    width: auto;
+}
+
+.logo-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  padding: 30px 0;  
+  z-index: 10; 
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+
+.logo span {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
